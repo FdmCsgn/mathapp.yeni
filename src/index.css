@@ -2,8 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-*::before
-::after{
+*::before::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -12,47 +11,50 @@
 
 .nav-container {
   display: flex;
-  align-items: center; /* Yatayda ortalamak için */
-  gap: 1rem; /* Öğeler arasındaki boşluğu ayarlayın */
+  align-items: center;
+  /* Yatayda ortalamak için */
+  gap: 1rem;
+  /* Öğeler arasındaki boşluğu ayarlayın */
 
 }
 
-.nav-color{
-  box-shadow: 0,8px,40px,0 rgba(31,38, 135, 0.37);
+.nav-color {
+  box-shadow: 0, 8px, 40px, 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(2px); /* Safari için -webkit önekiyle bulanıklık efekti */
+  -webkit-backdrop-filter: blur(2px);
+  /* Safari için -webkit önekiyle bulanıklık efekti */
 }
 
-.glassCard{
+.glassCard {
   background: rgba(2, 24, 32, 0.445);
-  box-shadow: 0,8px,40px,0 rgba(31,38, 135, 0.37);
+  box-shadow: 0, 8px, 40px, 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-radius: 20px;
-  border: 1px solid rgba(225, 255, 255,0.18);
+  border: 1px solid rgba(225, 255, 255, 0.18);
   width: 500px;
   height: auto;
 }
 
-.LoginglassCard{
+.LoginglassCard {
   background: rgba(2, 24, 32, 0.445);
-  box-shadow: 0,8px,40px,0 rgba(31,38, 135, 0.37);
+  box-shadow: 0, 8px, 40px, 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-radius: 20px;
-  border: 1px solid rgba(225, 255, 255,0.18);
+  border: 1px solid rgba(225, 255, 255, 0.18);
   width: 450px;
   height: auto;
 }
 
-.LogOutglassCard{
+.LogOutglassCard {
   background: rgba(2, 24, 32, 0.445);
-  box-shadow: 0,8px,40px,0 rgba(31,38, 135, 0.37);
+  box-shadow: 0, 8px, 40px, 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-radius: 20px;
-  border: 1px solid rgba(225, 255, 255,0.18);
+  border: 1px solid rgba(225, 255, 255, 0.18);
   width: 400px;
   height: auto;
   justify-content: center;
@@ -60,13 +62,13 @@
 }
 
 
-.HomeglassCard{
+.HomeglassCard {
   background: rgba(2, 24, 32, 0.445);
-  box-shadow: 0,8px,40px,0 rgba(31,38, 135, 0.37);
+  box-shadow: 0, 8px, 40px, 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-radius: 20px;
-  border: 1px solid rgba(225, 255, 255,0.18);
+  border: 1px solid rgba(225, 255, 255, 0.18);
   width: 500px;
   height: 500px;
   padding: 5%;
@@ -74,7 +76,7 @@
 
 
 
-.text{
+.text {
   font-family: serif;
   text-align: center;
   text-shadow: 3px 3px 2px black;
@@ -82,40 +84,42 @@
   color: white;
 }
 
-.text-weatherapp{
+.text-weatherapp {
   font-family: serif;
   text-align: center;
-  text-shadow: 3px 3px 2px black;
   color: white;
   margin-right: auto;
 }
 
 
-.location{
+.location {
   width: 50px;
   margin-right: 10px;
 }
 
 .menu {
   width: 50px;
-  margin-right: auto; /* Sağdaki öğeye mesafe bırakır */
+  margin-right: auto;
+  /* Sağdaki öğeye mesafe bırakır */
 }
 
 .menu-bar {
   display: flex;
   align-items: center;
-  text-decoration: none; /* Bağlantı alt çizgisini kaldırır */
-  color: inherit; /* Renk mirası alır */
+  text-decoration: none;
+  /* Bağlantı alt çizgisini kaldırır */
+  color: inherit;
+  /* Renk mirası alır */
   width: 200px;
 }
 
-.home-icon{
+.home-icon {
   width: 40px;
   margin-right: 10px;
   margin-left: 8px;
 }
 
-.search{
+.search {
   margin-left: auto;
 }
 
@@ -141,18 +145,29 @@
   font-size: 1.5em;
 }
 
-.forms{
+.forms {
   height: 50px;
   width: 400px;
 }
 
 .Side-by-side {
   display: flex;
-  align-items: center; /* Dikeyde ortalamak için */
-  justify-content: center; /* Yatayda ortalamak için */
+  align-items: center;
+  /* Dikeyde ortalamak için */
+  justify-content: center;
+  /* Yatayda ortalamak için */
 }
 
-.login-png{
+/* Tablet ve altı cihazlar için */
+@media (max-width: 650px) {
+  .Side-by-side {
+    flex-direction: column;
+    /* Ögeleri dikey hizala */
+  }
+}
+
+
+.login-png {
   width: 300px;
   height: auto;
   margin-left: 20%;
@@ -161,63 +176,23 @@
 
 }
 
-.ForgotCard{
+.ForgotCard {
   margin-top: 5%;
 }
 
-.LogOut{
+.LogOut {
   height: 50px;
   width: 350px;
   margin-top: 20px;
   background-color: #ff4a00;
 }
 
-.TypeAnimation{
-    width: 800px;
-    height: auto;
-    font-family: "Zilla Slab", serif;
-    margin-top: 100px;
-}
-
-/* From Uiverse.io by SteveBloX */ 
-.TypeAnimationsbutton {
-  width: 150px;
-  height: 60px;
-  border: 3px solid #00cddb;
-  border-radius: 45px;
-  transition: all 0.3s;
-  cursor: pointer;
-  background: #4bdce6;
-  font-size: 1.2em;
-  font-weight: 550;
-  font-family: "Zilla Slab", serif;
-  margin-top: 30px;
-}
-
-.TypeAnimationsbutton:hover {
-  background: #00cddb ;
-  color: white;
-  font-size: 1.5em;
-}
-
-.accordion{
-  margin-top: 100px;
-  background: #5adf6b;
-  box-shadow: 0,8px,40px,0 rgba(31,38, 135, 0.37);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-radius: 20px;
-  border: 1px solid #5adf6b;
-  width: 1500px;
-  height: auto;
-  font-family: "Zilla Slab", serif;
-  
-}
 
 .arkaplancontainer {
   width: 100%;
   height: 100%;
-  --s: 100px; /* control the size */
+  --s: 100px;
+  /* control the size */
 
   --_g: #0000 90deg, #366 0;
   background: conic-gradient(from 90deg at 2px 2px, var(--_g)),
