@@ -5,8 +5,6 @@ import book from '../assets/images/book.png'
 import '../Css/TypeAnimation.css'
 
 const TypeAnimations = () => {
-  const [open, setOpen] = React.useState(1);
-  const handleOpen = (value) => setOpen(open === value ? 0 : value);
 
   return (
     <div  >
