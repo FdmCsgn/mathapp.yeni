@@ -38,8 +38,10 @@ const PrivateRoute = ({ children }) => {
 function App() {
   return (
     <AuthProvider >
-      <div className='w-full h-screen text-white px-8   '>
-        <BasicMenu />
+      <div>
+        <div className='text-white px-8   '>
+          <BasicMenu />
+        </div>
         <BackgroundLayout />
 
         <Routes>

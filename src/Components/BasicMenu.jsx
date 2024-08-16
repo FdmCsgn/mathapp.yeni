@@ -24,8 +24,8 @@ export default function BasicMenu() {
 
   return (
     <div className=''>
-      <div>
-        <nav className='w-full p-3 flex justify-between items-center nav-color border-b-2 border-white '>
+      <div className=''>
+        <nav className='w-full p-3 flex justify-between items-center nav-color border-b-2 border-white  '>
           <div className='nav-container '>
             <img src={panter} alt="Season" className='w-[6rem] color-black' />
             <Link to='/'><h1 className='font-bold tracking-wide text-[3rem] text-weatherapp'>Panter Akademi</h1></Link>
