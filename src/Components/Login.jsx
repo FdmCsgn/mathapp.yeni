@@ -59,7 +59,7 @@ const Login = () => {
       <Box pt={10}>
         <Box textAlign="center">
           <Heading fontSize="100px" fontFamily="Gupter, serif" color="#ffe6e6">
-            Log In
+              
           </Heading>
         </Box>
         <Box my={12} textAlign="center" mt="12">
@@ -72,7 +72,7 @@ const Login = () => {
                 value={formData.email}
                 onChange={handleChange}
                 className="forms rounded-full mt-5"
-                placeholder="e-mail"
+                placeholder="Mail"
                 textAlign="center"
                 color="black"
               />
@@ -84,7 +84,7 @@ const Login = () => {
                 value={formData.password}
                 onChange={handleChange}
                 className="forms rounded-full"
-                placeholder="Password"
+                placeholder="Şifre"
                 textAlign="center"
                 color="black"
               />
@@ -93,20 +93,20 @@ const Login = () => {
             <div className="flex justify-center">
               <span>
                 <Link to="/ForgotPass" className="text-blue-500">
-                  Forgot Password?
+                  Şifrenimi unuttun?
                 </Link>
               </span>
             </div>
             <div>
               <button type="submit" className="signUp rounded-full">
-                Log In
+                Giriş yap
               </button>
             </div>
             <div className="mb-5">
               <span>
-                New Here?{" "}
+                Hesabın yokmu?{" "}
                 <Link to="/SignUp" className="text-blue-500">
-                  Create an Account
+                  Kayıt ol
                 </Link>
               </span>
             </div>

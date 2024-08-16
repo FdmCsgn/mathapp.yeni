@@ -188,6 +188,8 @@ function StudentSignUp() {
                   textAlign='center'
                   textColor='black'
                   className="forms rounded-full"
+                   min="1950-01-01"
+                   max={new Date().toISOString().split("T")[0]}
                 />
               </FormControl>
               <FormControl mt='12' mb='5'>
