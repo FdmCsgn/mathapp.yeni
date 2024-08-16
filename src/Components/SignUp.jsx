@@ -1,3 +1,6 @@
+
+
+
 import React, { useState } from "react";
 import { Box, Heading } from '@chakra-ui/react';
 import StudentSignUp from "./StudentSignUp";
@@ -11,7 +14,7 @@ function SignUp() {
     <div className="">
       <div className="mr-12">
       <Box textAlign='center'>
-        <Heading fontSize='100px' fontFamily='Gupter, serif' color='#ffe6e6'>Sign Up</Heading>
+        <Heading fontSize='100px'    color='#ffe6e6'>Kayıt ol</Heading>
       </Box>
       <div className="flex items-center justify-center">
         <button 
