@@ -18,19 +18,19 @@ function SignUp() {
           className='TypeAnimationsbutton ml-3' 
           onClick={() => setActiveComponent('student')}
         >
-          Student
+          Öğrenci
         </button>
         <button 
           className='TypeAnimationsbutton ml-3' 
           onClick={() => setActiveComponent('teacher')}
         >
-          Teacher
+          Öğretmen
         </button>
         <button 
           className='TypeAnimationsbutton ml-3' 
           onClick={() => setActiveComponent('parent')}
         >
-          Parents
+          Veli
         </button>
       </div>
       </div>

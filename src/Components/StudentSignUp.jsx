@@ -85,7 +85,7 @@ function StudentSignUp() {
                   value={formData.email}
                   onChange={handleChange}
                   className="forms rounded-full"
-                  placeholder="e-mail"
+                  placeholder="Mail"
                   textAlign='center'
                   textColor='black'
                 />
@@ -97,7 +97,7 @@ function StudentSignUp() {
                   value={formData.firstName}
                   onChange={handleChange}
                   className="forms rounded-full"
-                  placeholder="First Name"
+                  placeholder="Ad"
                   textAlign='center'
                   textColor='black'
                 />
@@ -109,7 +109,7 @@ function StudentSignUp() {
                   value={formData.lastName}
                   onChange={handleChange}
                   className="forms rounded-full"
-                  placeholder="Last Name"
+                  placeholder="Soyad"
                   textAlign='center'
                   textColor='black'
                 />
@@ -121,7 +121,7 @@ function StudentSignUp() {
                   value={formData.username}
                   onChange={handleChange}
                   className="forms rounded-full"
-                  placeholder="User Name"
+                  placeholder="Kullanıcı Adı"
                   textAlign='center'
                   textColor='black'
                 />
@@ -161,7 +161,7 @@ function StudentSignUp() {
                   value={formData.password}
                   onChange={handleChange}
                   className="forms rounded-full"
-                  placeholder="Password"
+                  placeholder="Şifre"
                   textAlign='center'
                   textColor='black'
                 />
@@ -173,7 +173,7 @@ function StudentSignUp() {
                   value={formData.passwordConfirm}
                   onChange={handleChange}
                   className="forms rounded-full"
-                  placeholder="Password"
+                  placeholder="Şifre Tekrar"
                   textAlign='center'
                   textColor='black'
                 />
@@ -205,7 +205,7 @@ function StudentSignUp() {
               {error && <p style={{ color: 'red' }}>{error}</p>} {/* Hata mesajı */}
 
               <button type="submit" className="signUp rounded-full">
-                Sign Up
+                      KAYIT OL
               </button>
             </form>
           </Box>

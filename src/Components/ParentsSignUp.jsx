@@ -88,7 +88,7 @@ function ParentSignUp() {
                   value={formData.email}
                   onChange={handleChange}
                   className="forms rounded-full"
-                  placeholder="E-mail"
+                  placeholder="Mail"
                   textAlign='center'
                   textColor='black'
                 />
@@ -100,7 +100,7 @@ function ParentSignUp() {
                   value={formData.firstName}
                   onChange={handleChange}
                   className="forms rounded-full"
-                  placeholder="First Name"
+                  placeholder="Ad"
                   textAlign='center'
                   textColor='black'
                 />
@@ -112,7 +112,7 @@ function ParentSignUp() {
                   value={formData.lastName}
                   onChange={handleChange}
                   className="forms rounded-full"
-                  placeholder="Last Name"
+                  placeholder="Soyad"
                   textAlign='center'
                   textColor='black'
                 />
@@ -124,7 +124,7 @@ function ParentSignUp() {
                   value={formData.username}
                   onChange={handleChange}
                   className="forms rounded-full"
-                  placeholder="User Name"
+                  placeholder="Kullanıcı Adı"
                   textAlign='center'
                   textColor='black'
                 />
@@ -172,7 +172,7 @@ function ParentSignUp() {
                   value={formData.password}
                   onChange={handleChange}
                   className="forms rounded-full"
-                  placeholder="Password"
+                  placeholder="Şifre"
                   textAlign='center'
                   textColor='black'
                 />
@@ -184,7 +184,7 @@ function ParentSignUp() {
                   value={formData.passwordConfirm}
                   onChange={handleChange}
                   className="forms rounded-full"
-                  placeholder="Confirm Password"
+                  placeholder="Şifre Tekrar"
                   textAlign='center'
                   textColor='black'
                 />
@@ -216,7 +216,7 @@ function ParentSignUp() {
               {error && <p style={{ color: 'red' }}>{error}</p>} {/* Hata mesajı */}
 
               <button type="submit" className="signUp rounded-full">
-                Sign Up
+                Kayıt ol
               </button>
             </form>
           </Box>
