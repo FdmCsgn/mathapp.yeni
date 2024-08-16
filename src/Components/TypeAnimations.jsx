@@ -8,8 +8,16 @@ import istatistik from '../assets/icons/HomePageIcons/istatistik.png'
 import professioanl from '../assets/icons/HomePageIcons/professional.png'
 import responsive from '../assets/icons/HomePageIcons/responsive.png'
 import userInterface from '../assets/icons/HomePageIcons/userinterface.png'
+import paneterakademi from '../assets/icons/HomePageIcons/panterakademi.jpg'
+import {
+  Accordion,
+  AccordionHeader,
+  AccordionBody,
+} from "@material-tailwind/react";
 
 const TypeAnimations = () => {
+  const [open, setOpen] = React.useState(0);
+  const handleOpen = (value) => setOpen(open === value ? 0 : value);
 
   return (
     <div  >
@@ -53,11 +61,11 @@ const TypeAnimations = () => {
         </div>
 
         <div className='Side-by-side'>
-          <section id="card1" className="card mr-5">
+          <section id="card1" className="card mr-5 mb-5">
             <img src={analiz} alt="" className='card-icon' />
-            <div class="card__content">
-              <p class="card__title">Veri Analizi ve Geri Bildirim</p>
-              <p class="card__description">
+            <div className="card__content">
+              <p className="card__title">Veri Analizi ve Geri Bildirim</p>
+              <p className="card__description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae
                 justo vel lorem tincidunt ultrices at non nunc. Donec in sapien viverra,
                 tincidunt augue id, efficitur massa.
@@ -65,11 +73,11 @@ const TypeAnimations = () => {
             </div>
           </section>
 
-          <section id="card1" class="card mr-5">
+          <section id="card1" className="card mr-5 mb-5">
             <img src={istatistik} alt="" className='card-icon' />
-            <div class="card__content">
-              <p class="card__title">istatistik Takibi</p>
-              <p class="card__description">
+            <div className="card__content">
+              <p className="card__title">istatistik Takibi</p>
+              <p className="card__description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae
                 justo vel lorem tincidunt ultrices at non nunc. Donec in sapien viverra,
                 tincidunt augue id, efficitur massa.
@@ -77,11 +85,11 @@ const TypeAnimations = () => {
             </div>
           </section>
 
-          <section id="card1" class="card mr-5">
+          <section id="card1" className="card mr-5 mb-5">
             <img src={professioanl} alt="" className='card-icon' />
-            <div class="card__content">
-              <p class="card__title">Deneyim Sahibi Ekip</p>
-              <p class="card__description">
+            <div className="card__content">
+              <p className="card__title">Deneyim Sahibi Ekip</p>
+              <p className="card__description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae
                 justo vel lorem tincidunt ultrices at non nunc. Donec in sapien viverra,
                 tincidunt augue id, efficitur massa.
@@ -89,11 +97,11 @@ const TypeAnimations = () => {
             </div>
           </section>
 
-          <section id="card1" class="card mr-5">
+          <section id="card1" className="card mr-5 mb-5">
             <img src={responsive} alt="" className='card-icon' />
-            <div class="card__content">
-              <p class="card__title">Mobil ve Web Erişimi</p>
-              <p class="card__description">
+            <div className="card__content">
+              <p className="card__title">Mobil ve Web Erişimi</p>
+              <p className="card__description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae
                 justo vel lorem tincidunt ultrices at non nunc. Donec in sapien viverra,
                 tincidunt augue id, efficitur massa.
@@ -101,17 +109,53 @@ const TypeAnimations = () => {
             </div>
           </section>
 
-          <section id="card1" class="card mr-5">
+          <section id="card1" className="card mr-5 mb-5">
             <img src={userInterface} alt="" className='card-icon' />
-            <div class="card__content">
-              <p class="card__title">Eğlenceli ve Etkileşimli Kullanıcı Arayüzü</p>
-              <p class="card__description">
+            <div className="card__content">
+              <p className="card__title">Eğlenceli ve Etkileşimli Kullanıcı Arayüzü</p>
+              <p className="card__description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae
                 justo vel lorem tincidunt ultrices at non nunc. Donec in sapien viverra,
               </p>
             </div>
           </section>
 
+        </div>
+      </div>
+
+      <div className='Side-by-side'>
+        <div>
+          <img src={paneterakademi} alt="" className='panterakademi' />
+        </div>
+        <div>
+          <Accordion open={open === 1}>
+            <AccordionHeader onClick={() => handleOpen(1)}>What is Material Tailwind?</AccordionHeader>
+            <AccordionBody>
+              We&apos;re not always in the position that we want to be at. We&apos;re constantly
+              growing. We&apos;re constantly making mistakes. We&apos;re constantly trying to express
+              ourselves and actualize our dreams.
+            </AccordionBody>
+          </Accordion>
+          <Accordion open={open === 2}>
+            <AccordionHeader onClick={() => handleOpen(2)}>
+              How to use Material Tailwind?
+            </AccordionHeader>
+            <AccordionBody>
+              We&apos;re not always in the position that we want to be at. We&apos;re constantly
+              growing. We&apos;re constantly making mistakes. We&apos;re constantly trying to express
+              ourselves and actualize our dreams.
+            </AccordionBody>
+          </Accordion>
+          <Accordion open={open === 3}>
+            <AccordionHeader onClick={() => handleOpen(3)}>
+              What can I do with Material Tailwind?
+            </AccordionHeader>
+            <AccordionBody>
+              We&apos;re not always in the position that we want to be at. We&apos;re constantly
+              growing. We&apos;re constantly making mistakes. We&apos;re constantly trying to express
+              ourselves and actualize our dreams.
+            </AccordionBody>
+          </Accordion>
         </div>
       </div>
 

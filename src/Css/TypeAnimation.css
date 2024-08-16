@@ -1,3 +1,19 @@
+.Side-by-side {
+    display: flex;
+    align-items: center;
+    /* Dikeyde ortalamak için */
+    justify-content: center;
+    /* Yatayda ortalamak için */
+}
+
+/* Tablet ve altı cihazlar için */
+@media (max-width: 950px) {
+    .Side-by-side {
+        flex-direction: column;
+        /* Ögeleri dikey hizala */
+    }
+}
+
 .TypeAnimation {
     width: auto;
     height: auto;
@@ -60,8 +76,8 @@
 /* From Uiverse.io by samuelfcosta18 */
 section.card {
     position: relative;
-    width: 250px;
-    height: 250px;
+    width: 400px;
+    height: 400px;
     background-color: #90cbf9;
     border-radius: 10px;
     display: flex;
@@ -110,6 +126,8 @@ section.card {
     font-size: 24px;
     color: #000000;
     font-weight: 700;
+    text-align: center;
+
 }
 
 .card:hover svg {
@@ -117,7 +135,7 @@ section.card {
 }
 
 .card__description {
-    margin: 10px 0 0;
+    margin: 1px 1px 1px;
     font-size: 14px;
     color: #000000;
     line-height: 1.4;
@@ -126,4 +144,8 @@ section.card {
 .card-icon {
     width: 100px;
 
+}
+
+.panterakademi {
+    width: 100px;
 }
