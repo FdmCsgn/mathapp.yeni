@@ -123,37 +123,42 @@ const TypeAnimations = () => {
         </div>
       </div>
 
-      <div className='Side-by-side'>
+      <div className='Side-by-side-Accordion'>
         <div>
           <img src={paneterakademi} alt="" className='panterakademi' />
         </div>
         <div>
-          <Accordion open={open === 1}>
-            <AccordionHeader onClick={() => handleOpen(1)}>What is Material Tailwind?</AccordionHeader>
+          <div>
+            <h1 className='text-5xl mb-12 Side-by-side'>Neden Panter Akademi</h1>
+          </div>
+          <Accordion open={open === 1} className='accordion-text  '>
+            <AccordionHeader className='text-3xl mt-4 ' onClick={() => handleOpen(1)}>Güçlü performans</AccordionHeader>
             <AccordionBody>
-              We&apos;re not always in the position that we want to be at. We&apos;re constantly
-              growing. We&apos;re constantly making mistakes. We&apos;re constantly trying to express
-              ourselves and actualize our dreams.
+              Uygulamanın hızlı ve sorunsuz çalışması, büyük verilerle bile güçlü bir performans sergilemektedir.
             </AccordionBody>
           </Accordion>
-          <Accordion open={open === 2}>
-            <AccordionHeader onClick={() => handleOpen(2)}>
-              How to use Material Tailwind?
-            </AccordionHeader>
+          <Accordion open={open === 2} className='accordion-text '>
+            <AccordionHeader className='text-3xl mt-4 ' onClick={() => handleOpen(2)}> Hızlı ve Dinamik Kullanıcı Deneyimi </AccordionHeader>
             <AccordionBody>
-              We&apos;re not always in the position that we want to be at. We&apos;re constantly
-              growing. We&apos;re constantly making mistakes. We&apos;re constantly trying to express
-              ourselves and actualize our dreams.
+              Kullanıcıların hızlıca sorular arasında geçiş yapabilmesi ve yanıtlarını anında alabilmektedir.
             </AccordionBody>
           </Accordion>
-          <Accordion open={open === 3}>
-            <AccordionHeader onClick={() => handleOpen(3)}>
-              What can I do with Material Tailwind?
-            </AccordionHeader>
+          <Accordion open={open === 3} className='accordion-text '>
+            <AccordionHeader className='text-3xl mt-4 ' onClick={() => handleOpen(3)}>Keskin Analiz ve Değerlendirme</AccordionHeader>
             <AccordionBody>
-              We&apos;re not always in the position that we want to be at. We&apos;re constantly
-              growing. We&apos;re constantly making mistakes. We&apos;re constantly trying to express
-              ourselves and actualize our dreams.
+              Öğrencilerin performansını detaylı ve doğru bir şekilde analiz eden algoritmalar kullanılmaktadır.
+            </AccordionBody>
+          </Accordion>
+          <Accordion open={open === 4} className='accordion-text '>
+            <AccordionHeader className='text-3xl mt-4 ' onClick={() => handleOpen(4)}> Stratejik Öğrenme Yöntemleri</AccordionHeader>
+            <AccordionBody>
+              Öğrencilere stratejik düşünme ve problem çözme becerileri kazandıran öğretim yöntemleri kullanılmaktadır.
+            </AccordionBody>
+          </Accordion>
+          <Accordion open={open === 5} className='accordion-text '>
+            <AccordionHeader className='text-3xl mt-4 ' onClick={() => handleOpen(5)}>Esneklik ve Uyum</AccordionHeader>
+            <AccordionBody>
+              Farklı cihazlar ve platformlar arasında uyumlu çalışma, esnek kullanım.
             </AccordionBody>
           </Accordion>
         </div>
