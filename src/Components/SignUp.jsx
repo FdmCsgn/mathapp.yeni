@@ -12,30 +12,30 @@ function SignUp() {
 
   return (
     <div className="">
-      <div className="mr-12">
-      <Box textAlign='center'>
-        <Heading fontSize='100px'    color='#ffe6e6'>Kayıt ol</Heading>
-      </Box>
-      <div className="flex items-center justify-center">
-        <button 
-          className='TypeAnimationsbutton ml-3' 
-          onClick={() => setActiveComponent('student')}
-        >
-          Öğrenci
-        </button>
-        <button 
-          className='TypeAnimationsbutton ml-3' 
-          onClick={() => setActiveComponent('teacher')}
-        >
-          Öğretmen
-        </button>
-        <button 
-          className='TypeAnimationsbutton ml-3' 
-          onClick={() => setActiveComponent('parent')}
-        >
-          Veli
-        </button>
-      </div>
+      <div className="">
+        <Box textAlign='center'>
+          <Heading fontSize='100px' color='#ffe6e6'>Kayıt ol</Heading>
+        </Box>
+        <div className="flex items-center justify-center">
+          <button
+            className='TypeAnimationsbutton ml-3'
+            onClick={() => setActiveComponent('student')}
+          >
+            Öğrenci
+          </button>
+          <button
+            className='TypeAnimationsbutton ml-3'
+            onClick={() => setActiveComponent('teacher')}
+          >
+            Öğretmen
+          </button>
+          <button
+            className='TypeAnimationsbutton ml-3'
+            onClick={() => setActiveComponent('parent')}
+          >
+            Veli
+          </button>
+        </div>
       </div>
       <div>
         {activeComponent === 'student' && <StudentSignUp />}

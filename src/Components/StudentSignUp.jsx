@@ -9,11 +9,11 @@ function StudentSignUp() {
     firstName: '',
     lastName: '',
     username: '',
-    StClass:'',
+    StClass: '',
     password: '',
     passwordConfirm: '',
     birthDate: '',
-    Şehir:''
+    Şehir: ''
   });
   const [error, setError] = useState('');
   const navigate = useNavigate();
@@ -26,6 +26,33 @@ function StudentSignUp() {
     });
   };
 
+  //parola koşulları
+  const validatePassword = (password) => {
+    const minLength = 8;
+    const hasUpperCase = /[A-Z]/.test(password);
+    const hasLowerCase = /[a-z]/.test(password);
+    const hasNumber = /\d/.test(password);
+    const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+
+    if (password.length < minLength) {
+      return `Parola en az ${minLength} karakter uzunluğunda olmalı.`;
+    }
+    if (!hasUpperCase) {
+      return "Parola en az bir büyük harf içermeli.";
+    }
+    if (!hasLowerCase) {
+      return "Parola en az bir küçük harf içermeli.";
+    }
+    if (!hasNumber) {
+      return "Parola en az bir sayı içermeli.";
+    }
+    if (!hasSpecialChar) {
+      return "Parola en az bir özel karakter içermeli.";
+    }
+    return null;
+  };
+
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(''); // Önceki hataları temizle
@@ -33,6 +60,13 @@ function StudentSignUp() {
     // Form verilerini doğrula
     if (!formData.username || !formData.password || !formData.email || !formData.firstName || !formData.lastName || !formData.StClass || !formData.birthDate || !formData.Şehir) {
       setError("Lütfen tüm alanları doldurun.");
+      return;
+    }
+
+    // Parola koşullarını kontrol et
+    const passwordError = validatePassword(formData.password);
+    if (passwordError) {
+      setError(passwordError);
       return;
     }
 
@@ -52,7 +86,7 @@ function StudentSignUp() {
           firstName: formData.firstName,
           lastName: formData.lastName,
           username: formData.username,
-          StClass:formData.StClass,
+          StClass: formData.StClass,
           password: formData.password,
           passwordConfirm: formData.passwordConfirm,
           birthDate: formData.birthDate,
@@ -71,6 +105,7 @@ function StudentSignUp() {
       setError("Kayıt sırasında bir hata oluştu. Lütfen tekrar deneyin.");
     }
   };
+
 
   return (
     <div className='mt-5'>
@@ -128,31 +163,31 @@ function StudentSignUp() {
               </FormControl>
               <FormControl mt='12' mb='5'>
                 <select
-                    name="StClass"
-                    value={formData.StClass}
-                    onChange={handleChange}
-                    className="forms rounded-full"
-                    style={{
-                       textAlign: 'center',
-                       color: 'black',
-                       padding: '8px 16px',
-                       fontSize: '1em',
-                       borderRadius: '9999px',
-                       border: '1px solid #ccc',
-                       backgroundColor: 'white'
-                      }}
-                 >
-                     <option value="" disabled hidden>Sınıf Seçin</option>
-                     <option value="1">1. Sınıf</option>
-                     <option value="2">2. Sınıf</option>
-                     <option value="3">3. Sınıf</option>
-                     <option value="4">4. Sınıf</option>
-                     <option value="5">5. Sınıf</option>
-                     <option value="6">6. Sınıf</option>
-                     <option value="7">7. Sınıf</option>
-                     <option value="8">8. Sınıf</option>
+                  name="StClass"
+                  value={formData.StClass}
+                  onChange={handleChange}
+                  className="forms rounded-full"
+                  style={{
+                    textAlign: 'center',
+                    color: 'black',
+                    padding: '8px 16px',
+                    fontSize: '1em',
+                    borderRadius: '9999px',
+                    border: '1px solid #ccc',
+                    backgroundColor: 'white'
+                  }}
+                >
+                  <option value="" disabled hidden>Sınıf Seçin</option>
+                  <option value="1">1. Sınıf</option>
+                  <option value="2">2. Sınıf</option>
+                  <option value="3">3. Sınıf</option>
+                  <option value="4">4. Sınıf</option>
+                  <option value="5">5. Sınıf</option>
+                  <option value="6">6. Sınıf</option>
+                  <option value="7">7. Sınıf</option>
+                  <option value="8">8. Sınıf</option>
                 </select>
-             </FormControl>
+              </FormControl>
 
               <FormControl mt='12' mb='5'>
                 <Input
@@ -166,6 +201,13 @@ function StudentSignUp() {
                   textColor='black'
                 />
               </FormControl>
+              <ul>
+                <li>Parola en az bir büyük harf içermeli.</li>
+                <li>Parola en az bir küçük harf içermeli.</li>
+                <li>Parola en az bir sayı içermeli.</li>
+                <li>Parola en az bir özel karakter içermeli.</li>
+                <li>Parola en az 8 karakter uzunluğunda olmalı.</li>
+              </ul>
               <FormControl mt='12' mb='5'>
                 <Input
                   name="passwordConfirm"
@@ -188,26 +230,26 @@ function StudentSignUp() {
                   textAlign='center'
                   textColor='black'
                   className="forms rounded-full"
-                   min="1950-01-01"
-                   max={new Date().toISOString().split("T")[0]}
+                  min="1950-01-01"
+                  max={new Date().toISOString().split("T")[0]}
                 />
               </FormControl>
               <FormControl mt='12' mb='5'>
-                  <Input
-                   name="Şehir"
-                   type="text"
-                   value={formData.Şehir}
-                   onChange={handleChange}
-                   placeholder="Şehir"
-                   textAlign='center'
-                   textColor='black'
-                   className="forms rounded-full"
-                   />
+                <Input
+                  name="Şehir"
+                  type="text"
+                  value={formData.Şehir}
+                  onChange={handleChange}
+                  placeholder="Şehir"
+                  textAlign='center'
+                  textColor='black'
+                  className="forms rounded-full"
+                />
               </FormControl>
               {error && <p style={{ color: 'red' }}>{error}</p>} {/* Hata mesajı */}
 
               <button type="submit" className="signUp rounded-full">
-                      KAYIT OL
+                KAYIT OL
               </button>
             </form>
           </Box>

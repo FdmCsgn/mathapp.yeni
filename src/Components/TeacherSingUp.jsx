@@ -8,11 +8,11 @@ function TeacherSingUp() {
     firstName: '',
     lastName: '',
     username: '',
-    Lessons:'',
+    Lessons: '',
     password: '',
     passwordConfirm: '',
     birthDate: '',
-    Şehir:''
+    Şehir: ''
   });
   const [error, setError] = useState('');
   const navigate = useNavigate();
@@ -25,6 +25,32 @@ function TeacherSingUp() {
     });
   };
 
+  //porala koşulları
+  const validatePassword = (password) => {
+    const minLength = 8;
+    const hasUpperCase = /[A-Z]/.test(password);
+    const hasLowerCase = /[a-z]/.test(password);
+    const hasNumber = /\d/.test(password);
+    const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+
+    if (password.length < minLength) {
+      return `Parola en az ${minLength} karakter uzunluğunda olmalı.`;
+    }
+    if (!hasUpperCase) {
+      return "Parola en az bir büyük harf içermeli.";
+    }
+    if (!hasLowerCase) {
+      return "Parola en az bir küçük harf içermeli.";
+    }
+    if (!hasNumber) {
+      return "Parola en az bir sayı içermeli.";
+    }
+    if (!hasSpecialChar) {
+      return "Parola en az bir özel karakter içermeli.";
+    }
+    return null;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(''); // Önceki hataları temizle
@@ -32,6 +58,13 @@ function TeacherSingUp() {
     // Form verilerini doğrula
     if (!formData.email || !formData.firstName || !formData.lastName || !formData.username || !formData.password || !formData.passwordConfirm) {
       setError("Lütfen tüm alanları doldurun.");
+      return;
+    }
+
+    // Parola koşullarını kontrol et
+    const passwordError = validatePassword(formData.password);
+    if (passwordError) {
+      setError(passwordError);
       return;
     }
 
@@ -51,7 +84,7 @@ function TeacherSingUp() {
           firstName: formData.firstName,
           lastName: formData.lastName,
           username: formData.username,
-          Lessons:formData.Lessons,
+          Lessons: formData.Lessons,
           password: formData.password,
           passwordConfirm: formData.passwordConfirm,
           birthDate: formData.birthDate,
@@ -149,6 +182,13 @@ function TeacherSingUp() {
                   textColor='black'
                 />
               </FormControl>
+              <ul>
+                <li>Parola en az bir büyük harf içermeli.</li>
+                <li>Parola en az bir küçük harf içermeli.</li>
+                <li>Parola en az bir sayı içermeli.</li>
+                <li>Parola en az bir özel karakter içermeli.</li>
+                <li>Parola en az 8 karakter uzunluğunda olmalı.</li>
+              </ul>
               <FormControl mt='12' mb='5'>
                 <Input
                   name="passwordConfirm"

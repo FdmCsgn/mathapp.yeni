@@ -14,7 +14,16 @@
 
 .Side-by-side-Accordion {
     display: flex;
+}
 
+@media (max-width: 950px) {
+    .Side-by-side-Accordion {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
 }
 
 .TypeAnimation {
@@ -136,19 +145,6 @@ section.card {
 }
 
 .panterakademi {
-    width: 600px;
-    margin-right: 50px;
-    margin-bottom: 50px;
-}
-
-.accordion {
-    margin-top: 100px;
-    width: 150px;
-    height: auto;
-    font-family: "Zilla Slab", serif;
-}
-
-.accordion-text {
-    color: white;
-    text-align: center;
+    width: 500px;
+    margin-top: 0;
 }

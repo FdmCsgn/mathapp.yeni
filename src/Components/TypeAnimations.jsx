@@ -129,38 +129,40 @@ const TypeAnimations = () => {
         </div>
         <div>
           <div>
-            <h1 className='text-5xl mb-12 Side-by-side'>Neden Panter Akademi</h1>
+            <h1 className='text-4xl mb-12 Side-by-side '>Neden Panter Akademi</h1>
           </div>
-          <Accordion open={open === 1} className='accordion-text  '>
-            <AccordionHeader className='text-3xl mt-4 ' onClick={() => handleOpen(1)}>Güçlü performans</AccordionHeader>
-            <AccordionBody>
-              Uygulamanın hızlı ve sorunsuz çalışması, büyük verilerle bile güçlü bir performans sergilemektedir.
-            </AccordionBody>
-          </Accordion>
-          <Accordion open={open === 2} className='accordion-text '>
-            <AccordionHeader className='text-3xl mt-4 ' onClick={() => handleOpen(2)}> Hızlı ve Dinamik Kullanıcı Deneyimi </AccordionHeader>
-            <AccordionBody>
-              Kullanıcıların hızlıca sorular arasında geçiş yapabilmesi ve yanıtlarını anında alabilmektedir.
-            </AccordionBody>
-          </Accordion>
-          <Accordion open={open === 3} className='accordion-text '>
-            <AccordionHeader className='text-3xl mt-4 ' onClick={() => handleOpen(3)}>Keskin Analiz ve Değerlendirme</AccordionHeader>
-            <AccordionBody>
-              Öğrencilerin performansını detaylı ve doğru bir şekilde analiz eden algoritmalar kullanılmaktadır.
-            </AccordionBody>
-          </Accordion>
-          <Accordion open={open === 4} className='accordion-text '>
-            <AccordionHeader className='text-3xl mt-4 ' onClick={() => handleOpen(4)}> Stratejik Öğrenme Yöntemleri</AccordionHeader>
-            <AccordionBody>
-              Öğrencilere stratejik düşünme ve problem çözme becerileri kazandıran öğretim yöntemleri kullanılmaktadır.
-            </AccordionBody>
-          </Accordion>
-          <Accordion open={open === 5} className='accordion-text '>
-            <AccordionHeader className='text-3xl mt-4 ' onClick={() => handleOpen(5)}>Esneklik ve Uyum</AccordionHeader>
-            <AccordionBody>
-              Farklı cihazlar ve platformlar arasında uyumlu çalışma, esnek kullanım.
-            </AccordionBody>
-          </Accordion>
+          <div className='ml-5'>
+            <Accordion open={open === 1}>
+              <AccordionHeader className='text-3xl mt-4 Side-by-side ' onClick={() => handleOpen(1)}>Güçlü performans</AccordionHeader>
+              <AccordionBody className='Side-by-side text-2xl'>
+                Uygulamanın hızlı ve sorunsuz çalışması, büyük verilerle bile güçlü bir performans sergilemektedir.
+              </AccordionBody>
+            </Accordion>
+            <Accordion open={open === 2} >
+              <AccordionHeader className='text-3xl mt-4 Side-by-side' onClick={() => handleOpen(2)}> Hızlı ve Dinamik Kullanıcı Deneyimi </AccordionHeader>
+              <AccordionBody className='Side-by-side text-2xl'>
+                Kullanıcıların hızlıca sorular arasında geçiş yapabilmesi ve yanıtlarını anında alabilmektedir.
+              </AccordionBody>
+            </Accordion>
+            <Accordion open={open === 3} >
+              <AccordionHeader className='text-3xl mt-4 Side-by-side' onClick={() => handleOpen(3)}>Keskin Analiz ve Değerlendirme</AccordionHeader>
+              <AccordionBody className='Side-by-side text-2xl'>
+                Öğrencilerin performansını detaylı ve doğru bir şekilde analiz eden algoritmalar kullanılmaktadır.
+              </AccordionBody>
+            </Accordion>
+            <Accordion open={open === 4} >
+              <AccordionHeader className='text-3xl mt-4 Side-by-side' onClick={() => handleOpen(4)}> Stratejik Öğrenme Yöntemleri</AccordionHeader>
+              <AccordionBody className='Side-by-side text-2xl'>
+                Öğrencilere stratejik düşünme ve problem çözme becerileri kazandıran öğretim yöntemleri kullanılmaktadır.
+              </AccordionBody>
+            </Accordion>
+            <Accordion open={open === 5} >
+              <AccordionHeader className='text-3xl mt-4 Side-by-side' onClick={() => handleOpen(5)}>Esneklik ve Uyum</AccordionHeader>
+              <AccordionBody className='Side-by-side text-2xl'>
+                Farklı cihazlar ve platformlar arasında uyumlu çalışma, esnek kullanım.
+              </AccordionBody>
+            </Accordion>
+          </div>
         </div>
       </div>
 
