@@ -28,7 +28,7 @@ function ForgotPass() {
               <img src={Forgotpassimg} alt="" className="login-png" />
               <Heading fontSize='50px' fontFamily='Gupter, serif' color='#ffe6e6'>Forgot Password</Heading>
               <FormControl mt='12' mb='5'>
-                <Input 
+                <Input
                   type="Email"
                   name="Email"
                   value={email}

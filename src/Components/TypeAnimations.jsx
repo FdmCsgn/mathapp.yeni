@@ -122,14 +122,14 @@ const TypeAnimations = () => {
 
         </div>
       </div>
-
+      {/* giriş safası accordion kısmı */}
       <div className='Side-by-side-Accordion'>
         <div>
           <img src={paneterakademi} alt="" className='panterakademi' />
         </div>
         <div>
           <div>
-            <h1 className='text-4xl mb-12 Side-by-side '>Neden Panter Akademi</h1>
+            <h1 className='text-4xl mt-12 Side-by-side '>Neden Panter Akademi</h1>
           </div>
           <div className='ml-5'>
             <Accordion open={open === 1}>

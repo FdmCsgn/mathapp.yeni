@@ -59,7 +59,7 @@ const Login = () => {
       <Box pt={10}>
         <Box textAlign="center">
           <Heading fontSize="100px" fontFamily="Gupter, serif" color="#ffe6e6">
-              
+
           </Heading>
         </Box>
         <Box my={12} textAlign="center" mt="12">
