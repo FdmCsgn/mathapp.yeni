@@ -50,8 +50,8 @@ export default function BasicMenu() {
               }}
             >
               <MenuItem onClick={handleClose}>
-                <Link to='./WeatherApp'><img src={home} alt="" className='home-icon' /></Link>
-                <Link to='./WeatherApp'>Home</Link>
+                <Link to='./'><img src={home} alt="" className='home-icon' /></Link>
+                <Link to='./'>Home</Link>
               </MenuItem>
               <MenuItem onClick={handleClose}>
                 <Link to='./SignUp'><img src={singupmenu} alt="" className='home-icon' /></Link>

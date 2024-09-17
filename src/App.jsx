@@ -1,6 +1,6 @@
 import React, { useState, useContext, createContext } from 'react';
 import './App.css';
-import { BasicMenu, SignUp, ForgotPass, ResetPassword, LogOut, Login, BackgroundLayout, TypeAnimations, StudentSignUp, TeacherSingUp, ParentSignUp } from './Components/';
+import { BasicMenu, SignUp, ForgotPass, ResetPassword, LogOut, Login, BackgroundLayout, TypeAnimations, StudentSignUp, TeacherSingUp, ParentSignUp, Dashbord } from './Components/';
 import { Routes, Route, Link, useNavigate, Navigate } from 'react-router-dom';
 
 
@@ -54,6 +54,7 @@ function App() {
           <Route path="/StudentSignUp" element={<StudentSignUp />} />
           <Route path="/TeacherSingUp" element={<TeacherSingUp />} />
           <Route path="/ParentSignUp" element={<ParentSignUp />} />
+          <Route path='/Dashbord' element={<Dashbord />} />
         </Routes>
       </div>
     </AuthProvider>

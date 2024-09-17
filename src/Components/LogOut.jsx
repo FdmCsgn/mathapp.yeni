@@ -31,7 +31,7 @@ const LogOutConfirmation = () => {
       <div className='LogOutglassCard'>
         <h1 className='text-2xl'>Çıkış yapmak istediğinizden emin misiniz?</h1>
         <button onClick={handleConfirm} className="LogOut rounded-full">Evet, çıkış yap</button>
-        <Link to='/WeatherApp'><button onClick={handleCancel} className="LogOut rounded-full mb-12">Hayır, kal</button></Link>
+        <Link to='/'><button onClick={handleCancel} className="LogOut rounded-full mb-12">Hayır, kal</button></Link>
       </div>
     </div>
   );

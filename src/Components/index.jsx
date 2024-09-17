@@ -20,3 +20,5 @@ export { default as StudentSignUp } from './StudentSignUp'
 export { default as TeacherSingUp } from './TeacherSingUp'
 
 export { default as ParentSignUp } from './ParentsSignUp'
+
+export { default as Dashbord } from './Dashbord'

@@ -45,7 +45,7 @@ const Login = () => {
       if (response.ok) {
         const data = await response.json();
         // login(); // Eğer useAuth kullanıyorsanız, kullanıcıyı giriş yapmış olarak işaretler
-        navigate("/WeatherApp");
+        navigate("/Dashbord");
       } else {
         alert("Giriş başarısız oldu.");
       }
